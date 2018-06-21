@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Text, View } from 'react-native';
 
-export default class home extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <View>
@@ -13,4 +13,4 @@ export default class home extends React.Component {
 }
 
 
-AppRegistry.registerComponent('home', ()=>home);
+AppRegistry.registerComponent('Home', ()=>Home);

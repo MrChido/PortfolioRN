@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Text, View } from 'react-native';
 
-export default class projects extends React.Component {
+export default class Projects extends React.Component {
   render() {
     return (
       <View>
@@ -10,4 +10,4 @@ export default class projects extends React.Component {
     );
   }
 }
-AppRegistry.registerComponent('projects',()=> projects);
+AppRegistry.registerComponent('Projects',()=> Projects);
