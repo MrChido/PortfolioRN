@@ -1,11 +1,11 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Text, View } from 'react-native';
-
+var S = require('../style.js');
 export default class Projects extends React.Component {
   render() {
     return (
       <View>
-        <Text>My Projects</Text>
+        <Text style ={S.heading}>My Projects</Text>
       </View>
     );
   }
