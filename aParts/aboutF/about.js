@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View } from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, Image, } from 'react-native';
 var S = require('../style.js');
 export default class About extends React.Component {
   render() {
@@ -13,6 +13,7 @@ export default class About extends React.Component {
         <Text style={S.cText}>
         Six Sigma Green Belt trained
         </Text>
+        img =<Image style ={S.image6S} source= {require('../../graphics/Six-Sigma2.jpg')}/>;
         <Text style ={S.cText}>
         Excelent pattern recogniton skills
         </Text>

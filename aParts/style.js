@@ -27,6 +27,10 @@ module.exports= StyleSheet.create({
         height:180,
         width:100,
     },
+    image6S:{
+        height:230,
+        width:230,    
+},
     imageC:{
         justifyContent: 'center',
         alignItems: 'center',
