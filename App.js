@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Switch, } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Switch, Button, } from 'react-native';
 var S = require('./aParts/style');
 import Home from './aParts/homeF/home';
 import About from './aParts/aboutF/about';
 import Projects from './aParts/projectsF/projects';
+import {createStackNavigator} from 'react-navigation';
 
-export default class App extends React.Component {
+class AlphaPage extends React.Component {
  constructor(){
      super();
      this.state={
@@ -30,11 +31,69 @@ export default class App extends React.Component {
         </View>       
         <Text style = {S.meMe}> Caleb Campbell</Text>
         <Home/>
-        <About/>
-        <Projects/>
+        
+       <Button
+        title="My Projects"
+        onPress={() => this.props.navigation.navigate('Projects')}
+        />
+        <Button
+        title="Resume"
+        onPress={() => this.props.navigation.navigate('About')}
+        />
         </ScrollView>
       </View>
     );
   }
 }
+class ProjectsPage extends React.Component{
+    render(){
+        return(
+        <View> 
+        <ScrollView style={S.scrollView}>
+         <Projects/>
+         <Button
+         title="Resume"
+         onPress={() => this.props.navigation.navigate('About')}/>
+         <Button
+         title= "Go to Intro"
+         onPress={() => this.props.navigation.navigate('Alpha')}/>
+         </ScrollView>   
+        </View>
+        );
+    }
+}
+class AboutPage extends React.Component{
+    render(){
+        return(
+        <View>
+        <ScrollView style ={S.scrollView}>    
+            <About/>
+         <Button
+         title="My Projects"
+         onPress={() => this.props.navigation.navigate('Projects')}/>
+         <Button
+         title="Go to Intro"
+         onPress={()=> this.props.navigation.navigate('Alpha')}/>
+         </ScrollView>
+        </View>
+        );
+    }
+}
 
+
+const RootStack = createStackNavigator(
+    {
+    Alpha: AlphaPage,
+    Projects: ProjectsPage,
+    About: AboutPage,
+    },
+    {
+      initalRouteName:'Alpha',  
+    },
+);
+
+export default class app extends React.Component{
+    render(){
+        return <RootStack />;
+    }
+}
