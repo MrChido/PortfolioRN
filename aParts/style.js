@@ -41,5 +41,16 @@ module.exports= StyleSheet.create({
         textAlign: 'center',
         fontSize: 17,
         backgroundColor: 'rgb(112,41,99)',
-    }
+    },
+    schoolin:{
+        fontSize:15,
+        textAlign:'center',
+        backgroundColor:'rgb(184,51,212)',
+        color:'rgb(231,254,255)',
+        padding: 5,
+        marginBottom:5,
+    },
+    workH:{
+        paddingLeft: 5
+    },
     });
