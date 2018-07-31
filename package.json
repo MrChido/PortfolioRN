@@ -1,6 +1,7 @@
 {
-  "name": "PortfolioRN",
-  "version": "0.1.0",
+  "name": "portfolioRN",
+  "version": "1.0.0",
+  "author":"Caleb Campbell",
   "private": true,
   "devDependencies": {
     "jest-expo": "~27.0.0",
