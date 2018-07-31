@@ -53,4 +53,7 @@ module.exports= StyleSheet.create({
     workH:{
         paddingLeft: 5
     },
+    pLink:{
+       fontSize:20, 
+    },
     });
